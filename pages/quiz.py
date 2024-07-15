@@ -16,16 +16,16 @@ container.write("문제 1번 ")
 lose = st.radio(
     "안재민은 오주현한테",
     [":rainbow[진다]", "***빈사상태가 된다***", "비긴다", "빈사상태를 만든다", "이긴다"])
-
-if lose == ":rainbow[진다]":
-    st.session_state.answer1 = 50
-else:
-    st.session_state.answer1 = 0
+if st.button('답 체출'):
+    if lose == ":rainbow[진다]":
+        st.session_state.answer1 = 50
+    else:
+        st.session_state.answer1 = 0
 
 color = st.text_input('안재민의 색깔은?')
-
-if color == "빨강 && 빨간색":
-    st.session_state.answer2 = 50
-else:
-    st.session_state.answer2 = 0
+if st.button('제출'):
+    if color == "빨강" and "빨간색":
+        st.session_state.answer2 = 50
+    else:
+        st.session_state.answer2 = 0
     
